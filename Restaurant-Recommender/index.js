@@ -7,6 +7,7 @@ const maxDistance = 10;
 let result;
 let hour = new Date().getHours();
 const priceBracket = dollarSigns.length;
+// Using multiple if statement to set params for the new restaurant array
 const filteredRestaurants = restaurants_1.default.filter((restaurant) => {
     if (Number(restaurant.priceBracket) > priceBracket) {
         return false;
