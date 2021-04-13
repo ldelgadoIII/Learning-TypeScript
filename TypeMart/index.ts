@@ -1,6 +1,6 @@
 import products from "./products"
 
-const productName: string = "fanny pack";
+const productName: string = "shirt";
 let shipping: number = 5;
 let taxPercent: number;
 let taxTotal: number;

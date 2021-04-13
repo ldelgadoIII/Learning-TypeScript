@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const products_1 = require("./products");
-const productName = "fanny pack";
+const productName = "shirt";
 let shipping = 5;
 let taxPercent;
 let taxTotal;
