@@ -25,6 +25,3 @@ console.log("Price of the product: ", Number(product.price));
 console.log("Tax total: ", taxTotal);
 console.log("Shipping: ", shipping);
 console.log("Total amount: ", total);
-for (let i = 0; i < 4; i++) {
-    console.log("Printed.");
-}
