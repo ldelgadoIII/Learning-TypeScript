@@ -2,7 +2,7 @@ import { restaurants, Restaurant } from "./restaurants";
 import { orders, Order, PriceBracket } from "./orders";
 
 /// Add your getMaxPrice() function below:
-function getMaxPrice(price: PriceBracket){
+function getMaxPrice(price: PriceBracket):number {
     switch (price) {
         case PriceBracket.Low:
             return 10.0;
@@ -13,12 +13,13 @@ function getMaxPrice(price: PriceBracket){
         case PriceBracket.High:
             return 30.0;
             break;
-        default:
-            return "None";
     }
 }
 
 /// Add your getOrders() function below:
+function getOrders(price:PriceBracket, orders: Order):any {
+
+}
 
 /// Add your printOrders() function below:
 
