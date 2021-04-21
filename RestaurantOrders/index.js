@@ -13,11 +13,13 @@ function getMaxPrice(price) {
         case orders_1.PriceBracket.High:
             return 30.0;
             break;
-        default:
-            return "None";
     }
 }
 /// Add your getOrders() function below:
+function getOrders(price, orders) {
+    let filteredOrders = [];
+    const result = orders[0].filter(order => order.price <= getMaxPrice(price));
+}
 /// Add your printOrders() function below:
 /// Main
 // const elligibleOrders = getOrders(PriceBracket.Low, orders);

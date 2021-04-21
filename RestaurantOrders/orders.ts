@@ -78,5 +78,4 @@ export enum PriceBracket {
    ];
    
    export type Order = typeof orders[0][0];
-   
-   
+   console.log(typeof orders[0][0]);
