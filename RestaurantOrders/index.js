@@ -18,7 +18,11 @@ function getMaxPrice(price) {
 /// Add your getOrders() function below:
 function getOrders(price, orders) {
     let filteredOrders = [];
-    const result = orders[0].filter(order => order.price <= getMaxPrice(price));
+    orders.forEach((restaurant) => {
+        const result = restaurant.filter((order) => order.price <= getMaxPrice(price));
+        filteredOrders.push(result);
+    });
+    return filteredOrders;
 }
 /// Add your printOrders() function below:
 /// Main
