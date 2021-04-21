@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const restaurants_1 = require("./restaurants");
 const orders_1 = require("./orders");
 /// Add your getMaxPrice() function below:
 function getMaxPrice(price) {
@@ -25,6 +26,14 @@ function getOrders(price, orders) {
     return filteredOrders;
 }
 /// Add your printOrders() function below:
+function printOrders(restaurants, orders) {
+    orders.forEach((order, index) => {
+        if (order[index]) {
+            console.log(restaurants[index].name);
+            order.forEach((item, index) => console.log(`- Order ${index + 1}: $${item.price}`));
+        }
+    });
+}
 /// Main
-// const elligibleOrders = getOrders(PriceBracket.Low, orders);
-// printOrders(restaurants, elligibleOrders);
+const elligibleOrders = getOrders(orders_1.PriceBracket.Low, orders_1.orders);
+printOrders(restaurants_1.restaurants, elligibleOrders);
