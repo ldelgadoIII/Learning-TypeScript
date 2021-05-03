@@ -38,4 +38,14 @@ function searchEvents(options: SearchEventsOptions){
 
 const search = searchEvents({ query: 2, eventType: "courses"});
 
-console.log(search)
+console.log("Search Results: ", search)
+
+let enrolledEvents: (Course | StudyGroup)[] = [];
+
+function enroll(event: Course | StudyGroup){
+    enrolledEvents = [...enrolledEvents, event];
+}
+
+enroll(search[0]);
+
+console.log("Enrolled Results: ", enrolledEvents)

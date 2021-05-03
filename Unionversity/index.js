@@ -14,4 +14,10 @@ function searchEvents(options) {
     });
 }
 const search = searchEvents({ query: 2, eventType: "courses" });
-console.log(search);
+console.log("Search Results: ", search);
+let enrolledEvents = [];
+function enroll(event) {
+    enrolledEvents = [...enrolledEvents, event];
+}
+enroll(search[0]);
+console.log("Enrolled Results: ", enrolledEvents);
