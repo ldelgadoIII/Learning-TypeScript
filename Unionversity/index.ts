@@ -1,5 +1,5 @@
 import courses from "./courses";
-import studyGroup from "./studyGroups";
+import studyGroups from "./studyGroups";
 
 type Course = {
     id: number,
@@ -23,5 +23,19 @@ type SearchEventsOptions = {
 }
 
 function searchEvents(options: SearchEventsOptions){
+    const events: (Course | StudyGroup)[] = options.eventType === "courses" ? courses : studyGroups;
 
+    return events.filter( (event: Course | StudyGroup) => {
+        if(typeof options.query === "number"){
+            return event.id === options.query;
+        }
+
+        if(typeof options.query === "string"){
+            return event.keywords.includes(options.query);
+        }
+    });
 }
+
+const search = searchEvents({ query: 2, eventType: "courses"});
+
+console.log(search)
