@@ -37,6 +37,14 @@ import {
       })
   }
   
+  function isVerified(verified: string | boolean){
+    if(typeof verified === "string"){
+      verified === "Yes" ? true : false;
+    }
+  
+    return verified;
+  }
+
   function calculateHours(volunteers: Volunteers[]) {
     return volunteers.map((volunteer) => {
       let hours = 0;

@@ -15,6 +15,12 @@ function combineVolunteers(volunteers) {
         };
     });
 }
+function isVerified(verified) {
+    if (typeof verified === "string") {
+        verified === "Yes" ? true : false;
+    }
+    return verified;
+}
 function calculateHours(volunteers) {
     return volunteers.map((volunteer) => {
         let hours = 0;
