@@ -21,12 +21,18 @@ import {
   function combineVolunteers(
     volunteers: (RaccoonMeadowsVolunteers | WolfPointVolunteers)[]
   ) {
-    volunteers.map( volunteer => {
+    return volunteers.map( volunteer => {
         let id = volunteer.id;
     
         if(typeof id === "string"){
-          return parseInt(id, 10);
-        }
+            id = parseInt(id, 10);
+          }
+      
+        return {
+            id: id,
+            name: volunteer.name,
+            activites: volunteer.activities
+          }
     
       })
   }
@@ -51,3 +57,4 @@ import {
     [].concat(wolfPointVolunteers, raccoonMeadowsVolunteers)
   );
   
+  console.log(combinedVolunteers)
