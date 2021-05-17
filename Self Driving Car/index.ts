@@ -40,8 +40,8 @@ class SteeringControl implements Steering {
         console.log(`Executing: ${command}`)
     }
 
-    turn(){
-
+    turn(direction: string){
+        this.execute(`turn ${direction}`)
     }
 }
 
